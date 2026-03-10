@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GREEN-API Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>GREEN-API</h1>
+      <p class="subtitle">Parameters for instance connection</p>
+    </header>
+
+    <section class="section connection-section">
+      <div class="field-row">
+        <label for="idInstance">idInstance</label>
+        <input type="text" id="idInstance" name="idInstance" placeholder="e.g. 110100001" autocomplete="off">
+      </div>
+      <div class="field-row">
+        <label for="apiTokenInstance">ApiTokenInstance</label>
+        <input type="password" id="apiTokenInstance" name="apiTokenInstance" placeholder="Your API token" autocomplete="off">
+      </div>
+      <div class="field-row">
+        <label for="apiUrl">apiUrl</label>
+        <input type="text" id="apiUrl" name="apiUrl" value="https://api.green-api.com" placeholder="https://api.green-api.com">
+      </div>
+    </section>
+
+    <section class="section buttons-section">
+      <h2 class="section-title">Methods</h2>
+      <div class="buttons-grid">
+        <button type="button" id="btnGetSettings" class="btn">getSettings</button>
+        <button type="button" id="btnGetStateInstance" class="btn">getStateInstance</button>
+        <button type="button" id="btnSendMessage" class="btn">sendMessage</button>
+        <button type="button" id="btnSendFileByUrl" class="btn">sendFileByUrl</button>
+      </div>
+    </section>
+
+    <section class="section params-section" id="sendMessageParams">
+      <h3 class="params-title">sendMessage parameters</h3>
+      <div class="field-row">
+        <label for="chatId">chatId</label>
+        <input type="text" id="chatId" name="chatId" placeholder="79876543210@c.us">
+      </div>
+      <div class="field-row">
+        <label for="message">message</label>
+        <textarea id="message" name="message" rows="3" placeholder="Message text"></textarea>
+      </div>
+    </section>
+
+    <section class="section params-section" id="sendFileByUrlParams">
+      <h3 class="params-title">sendFileByUrl parameters</h3>
+      <div class="field-row">
+        <label for="fileChatId">chatId</label>
+        <input type="text" id="fileChatId" name="fileChatId" placeholder="79876543210@c.us">
+      </div>
+      <div class="field-row">
+        <label for="urlFile">urlFile</label>
+        <input type="url" id="urlFile" name="urlFile" placeholder="https://example.com/file.png">
+      </div>
+      <div class="field-row">
+        <label for="fileName">fileName</label>
+        <input type="text" id="fileName" name="fileName" placeholder="file.png">
+      </div>
+      <div class="field-row">
+        <label for="caption">caption (optional)</label>
+        <input type="text" id="caption" name="caption" placeholder="Optional caption">
+      </div>
+    </section>
+
+    <section class="section response-section">
+      <h2 class="section-title">Response</h2>
+      <textarea id="response" class="response-output" readonly placeholder="Method response will appear here..."></textarea>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

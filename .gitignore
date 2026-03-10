@@ -1,0 +1,10 @@
+# OS
+.idea
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local / IDE (do not add .cursor here per project rules)
